@@ -4,12 +4,25 @@
     <title>RailsSimpleAirbnb</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <div class="nav-wrapper">
+      <div class="nav-left">
+        <h1><%= link_to "Simple AirBnb", flats_path %></h1>
+      </div>
+      <div class="nav-right">
+        <form action="" class="form-inline">
+          <input type="text" name="search" placeholder="Search...">
+          <input type="submit" class="btn btn-success">
+        </form>
+        <%= link_to "Add flat", new_flat_path %>
+      </div>
+    </div>
     <%= yield %>
   </body>
 </html>

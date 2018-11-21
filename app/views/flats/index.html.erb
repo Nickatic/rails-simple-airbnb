@@ -1,0 +1,43 @@
+<div class="container">
+  <% if @count == @flats.count %>
+    <h1>All our flats</h1>
+  <% else %>
+    <h1>Search results</h1>
+    <p>
+      <%= "You searched for #{@search}. We found #{@flats.count} flats out of our #{@count} on our website." %>
+    </p>
+  <% end %>
+  <% @flats.each do |flat| %>
+    <div class="col-xs-12 col-sm-4">
+      <div class="card">
+        <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= flat.img_url %>);">
+          <div class="card-description">
+            <h2><%= flat.name %></h2>
+            <p><%= flat.address %></p>
+          </div>
+          <%= link_to "", flat_path(flat), class: "card-link" %>
+        </div>
+        <div class="card-footer">
+          <div class="infos">
+            <i class="fas fa-users"></i>
+            <p><%= flat.number_of_guests %></p>
+          </div>
+          <div class="infos">
+            <i class="fas fa-money-bill-wave"></i>
+            <p><%= flat.price_per_night %></p>
+          </div>
+
+        </div>
+        <div class="links">
+          <%= link_to "More info", flat_path(flat)%>
+          <%= link_to "Edit", edit_flat_path(flat)%>
+          <%= link_to "Remove", flat_path(flat), method: :delete %>
+        </div>
+      </div>
+
+    </div>
+  <% end %>
+</div>
+
+
+

@@ -1,0 +1,34 @@
+<div class="banner" style="background-image: url(<%= @flat.img_url %>)"></div>
+<div class="flat-details">
+  <div class="left-details">
+    <div class="flat-title">
+      <h1><%= @flat.name %></h1>
+      <h3><em><%= @flat.address %></em></h3>
+    </div>
+    <div class="description">
+      <h2>A bit more about the flat :</h2>
+      <p><%= @flat.description %></p>
+    </div>
+  </div>
+
+  <div class="right-details">
+    <div class="infos-container">
+      <div class="infos">
+        <i class="fas fa-users"></i>
+        <p><%= @flat.number_of_guests %></p>
+      </div>
+      <div class="infos">
+        <i class="fas fa-money-bill-wave"></i>
+        <p><%= @flat.price_per_night %></p>
+      </div>
+    </div>
+    <div class="social">
+      <a href="#"><i class="fab fa-twitter-square"></i></a>
+      <a href="#"><i class="fab fa-facebook-square"></i></a>
+      <a href="#"><i class="fab fa-google-plus-square"></i></a>
+      <a href="#"><i class="fab fa-pinterest-square"></i></a>
+
+    </div>
+  </div>
+</div>
+

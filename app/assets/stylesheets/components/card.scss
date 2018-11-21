@@ -1,0 +1,30 @@
+.card {
+  box-shadow: 5px 3px 3px lightgrey;
+  margin: 10px 0;
+}
+.card-body {
+  height: 200px;
+  color: white;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.card-description {
+  position: absolute;
+  bottom: 10px;
+  left: 30px;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-around;
+  margin: 10px
+}
+
+// .card-link
+
+.links {
+  display: flex;
+  justify-content: space-around;
+}
